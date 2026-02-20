@@ -165,3 +165,46 @@ Open in browser:
 ```text
 http://localhost:5001
 ```
+
+---
+
+## 📊 Development Notes
+
+**Response Schema Enforcement**
+Uses Gemini’s `response_mime_type: "application/json"` flag for deterministic output.
+
+**Retry Logic**
+If model output fails schema filters, the system retries once.
+
+**Async Critique**
+Critique is fire-and-forget — non-blocking for users.
+
+**Override Tracking**
+Word-level diff uses the `diff` npm package.
+
+---
+
+## 🧠 Why This Architecture Matters
+
+This system demonstrates how to control, evaluate, and govern generative AI output in a real production-like context.
+It documents tradeoffs such as:
+- Latency vs critique depth
+- Deterministic vs probabilistic behavior
+- Human trust metrics vs model confidence
+
+It is designed to be observable and auditable.
+
+---
+
+## 📍 Future Improvements
+
+- Section-level regeneration
+- Event-driven evaluation queue
+- Admin dashboard for metrics
+- Role-based access controls
+- Semantic tag validation
+
+---
+
+## 📄 License
+MIT License
