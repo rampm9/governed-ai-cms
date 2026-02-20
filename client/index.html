@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Arabic AI CMS Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <h1>Arabic AI CMS Assistant</h1>
+
+    <div class="input-panel">
+        <textarea id="inputText" placeholder="أدخل عنوان أو فكرة المقال هنا"></textarea>
+        <div class="controls">
+            <span id="charCount">0 characters</span>
+            <button id="generateBtn">Generate</button>
+        </div>
+        <div id="errorMessage" class="error"></div>
+    </div>
+
+    <div id="loading" class="loading hidden">Generating...</div>
+
+    <div id="metricsPanel" class="metrics hidden"></div>
+
+    <div id="output"></div>
+
+    <footer>
+        <p>A project <a href="https://madebyram.com" target="_blank">madebyram</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
